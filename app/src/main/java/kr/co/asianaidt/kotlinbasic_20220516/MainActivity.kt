@@ -39,6 +39,38 @@ class MainActivity : AppCompatActivity() {
 
             name1 = "이철수"
             //name2 = "정영희" // val:상수이므로 변경 불가
+
+            //변수 초기화
+            var year1 = 1998 //year1은 자동으로 Int형
+            //year1 ="천구백구십팔" //설정된 자료형은 걔속 유지(자료형 안맞아서 대입 불가가)
+        }
+
+        btnCondition.setOnClickListener {
+            //1. if문 테스트
+
+            val userAge = 18
+
+            if(userAge >= 20){
+                Toast.makeText(this,"성인입니다.", Toast.LENGTH_SHORT).show()
+            }
+            else if (userAge >= 17){
+                Toast.makeText(this,"고등학생입니다.", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this,"중학생 이하입니다.", Toast.LENGTH_SHORT).show()
+            }
+
+            //2. when 테스트
+            val num = 30
+            when(num){
+                10 ->{
+                    Log.d("when테스트", "10인경우")
+                }
+                15 -> Log.d("when", "15인경우 - 코드 한줄")
+                20,30,40 -> Log.d("when", "20,30,40 중 하나인경우")
+                in 41..100 -> Log.d("when", "41~100인경우")
+                else-> Log.d("when", "그 외에 모든 경우")
+            }
         }
     }
 }
