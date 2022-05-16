@@ -31,6 +31,12 @@
         android:layout_height="wrap_content"
         android:text="조건문 문법 테스트" />
 
+    <Button
+        android:id="@+id/btnReapeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="반복문 문법 테스트" />
+
 
 
 </LinearLayout>
